@@ -59,8 +59,8 @@ bool existeAresta(GRAFO* g, int v1, int v2);
 
     bool retiraAresta(GRAFO* g, int v1, int v2) recebe o endereco do grafo g, um
     int v1 e um int v2 que sao vertices. Se v1 e v2 forem vertices validos e existir
-    uma aresta que sai de v1 e chega em v2, a funcao a retirara e retornara true. Caso
-    nao haja, retornara false.
+    uma aresta que sai de v1 e chega em v2, a funcao a retirara, decrementara o numero de arestas
+    e retornara true. Caso nao haja, retornara false.
 
 */
 
@@ -79,7 +79,7 @@ void liberaGrafo(GRAFO* g);
 
     void imprimeGrafo(GRAFO* g) recebe o endereco do grafo g e imprime a matriz de
     adjacencia que o representa. Nessa matriz, o numero 1 sinaliza que a uma aresta 
-    que sai do vertice na linha i e chega no vertice na coluna j. Caso nao haja vertice,
+    que sai do vertice na linha i e chega no vertice na coluna j. Caso nao haja aresta,
     a posicao guardara o numero 0.
 
 */
