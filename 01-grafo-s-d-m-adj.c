@@ -6,7 +6,7 @@
 
 bool inicializaGrafo(GRAFO* g, int nv)
 {
-    if(nv >= 1 && nv <= MAX_NUM_VERTICES) // numero de vertices for valido
+    if(nv >= 1 && nv <= MAX_NUM_VERTICES) // numero de vertices valido
     {
         int i, j;
 
@@ -20,7 +20,7 @@ bool inicializaGrafo(GRAFO* g, int nv)
 
         return (true);
 
-    } else if (nv < 1) { // numero de vertices menor que 1
+    } else if(nv < 1) { // numero de vertices menor que o minimo
 
         fprintf(stderr, "Erro: inicializaGrafo(GRAFO* g, int nv) - nv < 1\n");
 
@@ -36,7 +36,7 @@ bool inicializaGrafo(GRAFO* g, int nv)
 
 bool insereAresta(GRAFO* g, int v1, int v2)
 {
-    if((v1 >= 1 && v1 <= g->numVertices) && (v2 >= 1 && v2 <= g->numVertices))
+    if((v1 >= 1 && v1 <= g->numVertices) && (v2 >= 1 && v2 <= g->numVertices)) // indices validos
     {
         if(g->m[v1][v2] != 1)
         {
@@ -47,11 +47,11 @@ bool insereAresta(GRAFO* g, int v1, int v2)
 
         return (true);
 
-    } else if(v1 < 1 || v2 < 1) {
+    } else if(v1 < 1 || v2 < 1) { // indice menor que o minimo
 
         fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2, int direc) - v1 ou v2 < 1\n");
 
-    } else {
+    } else { // indice maior que o maximo
 
         fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2, int direc) - v1 ou v2 > g->numVertices\n");
 
@@ -63,15 +63,15 @@ bool insereAresta(GRAFO* g, int v1, int v2)
 
 bool existeAresta(GRAFO* g, int v1, int v2)
 {
-    if((v1 > 0 && v2 > 0) && (v1 <= g->numVertices && v2 <= g->numVertices))
+    if((v1 > 0 && v2 > 0) && (v1 <= g->numVertices && v2 <= g->numVertices)) // indices validos
     {
         if(g->m[v1][v2] == 1) return (true);
 
-    } else if(v1 < 1 || v2 < 1) {
+    } else if(v1 < 1 || v2 < 1) { // indice menor que o minimo
 
         fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 menor que um\n");
 
-    } else if (v1 > g->numVertices || v2 > g->numVertices) {
+    } else if(v1 > g->numVertices || v2 > g->numVertices) { // indice maior que o maximo
 
         fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 maior que qtd de vertices\n");
 
@@ -81,7 +81,7 @@ bool existeAresta(GRAFO* g, int v1, int v2)
 
 bool retiraAresta(GRAFO* g, int v1, int v2)
 {
-    if(v1 > 0 && v2 > 0 && v1 <= g->numVertices && v2 <= g->numVertices) 
+    if(v1 > 0 && v2 > 0 && v1 <= g->numVertices && v2 <= g->numVertices) // indices validos
     {
         if(g->m[v1][v2] == 1) 
         {
@@ -92,11 +92,11 @@ bool retiraAresta(GRAFO* g, int v1, int v2)
 
         }
 
-    } else if(v1 < 1 || v2 < 1) {
+    } else if(v1 < 1 || v2 < 1) { // indice menor que o minimo
 
         fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2, int direc) - v1 ou v1 < 1\n");
 
-    } else if(v1 > g->numVertices || v2 > g->numVertices) {
+    } else if(v1 > g->numVertices || v2 > g->numVertices) { // indice maior que o maximo
 
         fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2, int direc) - v1 ou v1 > g->numVertices\n");
 
@@ -146,6 +146,6 @@ GRAFO grafoTransposto(GRAFO* g)
 int main()
 {
 
-    return 0;
+    return (0);
 
 }

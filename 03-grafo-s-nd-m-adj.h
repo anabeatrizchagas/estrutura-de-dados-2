@@ -24,10 +24,10 @@ typedef struct
 
 /*
 
-    bool inicializaGrafo(GRAFO* g, int nv) recebe como parametro o endereco do
-    grafo g e um int nv que e a quantidade de vertices que tera nesse grafo. 
-    A funcao inicializa com 0 uma matriz de adjacencia que representa o grafo.
-    Alem disso, tambem zera a o numero de vertices e arestas do grafo.
+    bool inicializaGrafo(GRAFO* g, int nv) recebe como parametro o endereco do grafo g 
+    e um int nv que e a quantidade de vertices que tera nesse grafo. A funcao inicializa 
+    com 0 uma matriz de adjacencia que representa o grafo. Alem disso, tambem atualiza o 
+    numero de vertices e zera o numero de arestas do grafo.
 
 */
 

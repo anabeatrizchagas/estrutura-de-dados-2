@@ -29,10 +29,10 @@ typedef struct
 
 /*
 
-    bool inicializaGrafo(GRAFO* g, int nv) recebe como parametro o endereco do
-    grafo g e um int nv que e a quantidade de vertices que tera nesse grafo. 
-    A funcao inicializa com AN uma matriz de adjacencia que representa o grafo.
-    Alem disso, tambem zera a o numero de vertices e arestas do grafo.
+    bool inicializaGrafo(GRAFO* g, int nv) recebe como parametro o endereco do grafo g 
+    e um int nv que e a quantidade de vertices que tera nesse grafo. A funcao inicializa 
+    com 0 uma matriz de adjacencia que representa o grafo. Alem disso, tambem atualiza o 
+    numero de vertices e zera o numero de arestas do grafo.
 
 */
 
@@ -84,7 +84,7 @@ bool liberaGrafo(GRAFO* g);
 /*
 
     void imprimeGrafo(GRAFO* g) recebe o endereco do grafo g e imprime a matriz de
-    adjacencia que o representa. Nessa matriz, o AN  sinaliza que nao ha uma aresta 
+    adjacencia que o representa. Nessa matriz, o AN sinaliza que nao ha uma aresta 
     que sai do vertice na linha i e chega no vertice na coluna j. Caso haja aresta,
     a posicao guardara o peso dela.
 
@@ -94,7 +94,7 @@ void imprimeGrafo(GRAFO* g);
 
 /*
 
-    PESO retornaMin(GRAFO* g) resebe o endereco do grafo g e retorna o menor peso desse grafo.
+    PESO retornaMin(GRAFO* g) recebe o endereco do grafo g e retorna o menor peso desse grafo.
     Caso o grafo nao possua arestas, a funcao retorna um erro informando que nao existe nenhuma aresta.
 
 */
