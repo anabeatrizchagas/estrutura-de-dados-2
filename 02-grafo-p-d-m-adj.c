@@ -48,7 +48,7 @@ bool insereAresta(GRAFO* g, int v1, int v2, PESO p)
 
     } else if(p < MIN_PESO) { // peso menor que o minimo
 
-        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - p < MIN_PESO \n");
+        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - p < MIN_PESO\n");
         return (false);
 
     } else if(p > MAX_PESO) { // peso maior que o maximo
@@ -135,7 +135,7 @@ PESO retornaMin(GRAFO* g)
 {
     if(g->numArestas == 0) // grafo vazio (sem pesos validos)
     {
-        fprintf(stderr, "Erro: retornaMin(GRAFO* g) o grafo g indicado esta vazio\n");
+        fprintf(stderr, "Erro: retornaMin(GRAFO* g) - o grafo g indicado esta vazio\n");
         
     } else { // grafo com arestas (tem peso validos)
 

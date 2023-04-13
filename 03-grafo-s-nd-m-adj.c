@@ -13,7 +13,7 @@ bool inicializaGrafo(GRAFO* g, int nv)
 
     } else if(nv > MAX_NUM_VERTICES) { // numero de vertices maior que o maximo
 
-        fprintf(stderr, "Erro: inicializaGrafo(GRAFO* g, int nv) - nv > que MAX_NUM_VERTICES");
+        fprintf(stderr, "Erro: inicializaGrafo(GRAFO* g, int nv) - nv > MAX_NUM_VERTICES");
         return (false);
 
     } else { // numero de vertices valido
@@ -38,11 +38,11 @@ bool insereAresta(GRAFO* g, int v1, int v2)
 {
     if(v1 < 1 || v2 < 1) // indice menor que o minimo
     {
-        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < que 1\n");
+        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < 1\n");
 
     } else if(v1 > MAX_NUM_VERTICES || v2 > MAX_NUM_VERTICES) { // indice maior que o maximo
 
-        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > que NUM_MAX_VERTICES\n");
+        fprintf(stderr, "Erro: insereAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > NUM_MAX_VERTICES\n");
 
     } else if(v1 == v2) { // no grafo nao direcionado, a matriz tem diagonal vazia
 
@@ -66,11 +66,11 @@ bool existeAresta(GRAFO* g, int v1, int v2)
 {
     if(v1 < 1 || v2 < 1) // indice menor que o minimo
     {
-        fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < que 1\n");
+        fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < 1\n");
 
     } else if(v1 > MAX_NUM_VERTICES || v2 > MAX_NUM_VERTICES) { // indice maior que o maximo
 
-        fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > que NUM_MAX_VERTICES\n");
+        fprintf(stderr, "Erro: existeAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > NUM_MAX_VERTICES\n");
 
     } else { // indice valido
 
@@ -86,11 +86,11 @@ bool retiraAresta(GRAFO* g, int v1, int v2)
 {
     if(v1 < 1 || v2 < 1) // indice menor que o minimo
     {
-        fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < que 1\n");
+        fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2) - v1 ou v2 < 1\n");
 
     } else if(v1 > MAX_NUM_VERTICES || v2 > MAX_NUM_VERTICES) { // indice maior que o maximo
 
-        fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > que NUM_MAX_VERTICES\n");
+        fprintf(stderr, "Erro: retiraAresta(GRAFO* g, int v1, int v2) - v1 ou v2 > NUM_MAX_VERTICES\n");
 
     } else { // indice valido
 
